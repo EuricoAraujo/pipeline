@@ -58,8 +58,8 @@ def dag_principal():
         #aws_secret_acces_key = Variable.get('aws_secret_acces_key')
     @task
     def upload_to_aws(local_file, bucket, s3_file):
-        ACCESS_KEY = 'AKIAVH23PT4OBVOATI5B'
-        SECRET_KEY = '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'
+        ACCESS_KEY = Variable.get('aws_acces_key_id') 
+        SECRET_KEY = Variable.get('aws_secret_acces_key')
         s3 = boto3.client('s3', aws_access_key_id=ACCESS_KEY,
                         aws_secret_access_key=SECRET_KEY)
 
