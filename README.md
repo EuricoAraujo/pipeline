@@ -1,4 +1,3 @@
-# pipeline 
 # Apache airflow
 # Docker
 # AWS
